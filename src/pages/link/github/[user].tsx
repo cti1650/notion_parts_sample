@@ -1,8 +1,7 @@
 
 
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { AiFillGithub } from 'react-icons/ai';
 
