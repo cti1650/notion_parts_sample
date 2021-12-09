@@ -7,12 +7,13 @@ import cc from 'classcat';
 export default function Layout({ children }) {
   const router = useRouter();
   const dark = router.query.dark;
+  console.log(dark);
   return (
     <>
       <div className={cc([{
         'bg-[#2F3437]' :dark !== undefined,
-        'bg-white':dark !== undefined
-      },'bg-opacity-0 w-screen h-screen flex justify-center items-center content-center'])}>
+        'bg-white':dark === undefined
+      },'w-screen h-screen flex justify-center items-center content-center'])}>
         {children}
       </div>
     </>
