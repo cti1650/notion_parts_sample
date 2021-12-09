@@ -13,7 +13,6 @@ const Home = () => {
     <div>
       <Head>
         <title>Test</title>
-        <meta property='og:title' content='Tailwind CC' />
       </Head>
   
       <GitHubButton user={user} />
