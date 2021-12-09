@@ -1,13 +1,10 @@
-import Navbar from './navbar';
-import Footer from './footer';
 import React from 'react';
 import { useRouter } from 'next/router';
 import cc from 'classcat';
 
-export default function Layout({ children }) {
+export const Layout = ({ children }) => {
   const router = useRouter();
   const dark = router.query.dark;
-  console.log(dark);
   return (
     <>
       <div className={cc([{
@@ -18,4 +15,4 @@ export default function Layout({ children }) {
       </div>
     </>
   );
-}
+};
