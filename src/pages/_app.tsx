@@ -4,11 +4,9 @@ import React from 'react';
 import { AppProps } from 'next/app';
 import Layout from '@comp/layout/layout';
 import Head from 'next/head';
-import { usePageView } from '@hooks/usePageView';
 
 const TailwindApp = (props: AppProps) => {
   const { Component, pageProps } = props;
-  usePageView();
   return (
     <Layout>
       <Head>
