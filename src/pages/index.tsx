@@ -7,7 +7,7 @@ const Home = () => {
     alert('ok');
   };
   return (
-    <div className='container max-w-screen-md mx-auto text-sans'>
+    <div>
       <Head>
         <title>Test</title>
       </Head>

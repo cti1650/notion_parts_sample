@@ -8,8 +8,8 @@ export const Layout = ({ children }) => {
   return (
     <>
       <div className={cc([{
-        'bg-[#2F3437]' :dark !== undefined,
-        'bg-white':dark === undefined
+        'bg-[#2F3437] bg-opacity-0' :dark !== undefined,
+        'bg-white bg-opacity-0':dark === undefined
       },'w-screen h-screen flex justify-center items-center content-center'])}>
         {children}
       </div>
