@@ -7,7 +7,6 @@ const Home = () => {
   const router = useRouter();
   console.log(router);
   const titleName = router.query.name;
-  const url = router.query?.url || '/';
   const handleClick = () => {
     window.alert('ok');
   };
@@ -20,7 +19,6 @@ const Home = () => {
       <button className="px-8 py-4 bg-gray-300 border border-gray-500 shadow rounded-lg" onClick={handleClick}>
         {titleName}
       </button>
-      <a href={url} className="px-8 py-4 bg-gray-300 border border-gray-500 shadow rounded-lg" >link</a>
     </div>
   );
 };
