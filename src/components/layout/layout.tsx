@@ -1,11 +1,18 @@
 import Navbar from './navbar';
 import Footer from './footer';
 import React from 'react';
+import { useRouter } from 'next/router';
+import cc from 'classcat';
 
 export default function Layout({ children }) {
+  const router = useRouter();
+  const dark = router.query.dark;
   return (
     <>
-      <div className='bg-opacity-0 w-screen h-screen flex justify-center items-center content-center'>
+      <div className={cc([{
+        'bg-[#2F3437]' :dark !== undefined,
+        'bg-white':dark !== undefined
+      },'bg-opacity-0 w-screen h-screen flex justify-center items-center content-center'])}>
         {children}
       </div>
     </>
