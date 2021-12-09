@@ -11,7 +11,7 @@ export default function Navbar({ children }: typeProps) {
     <>
       <div className='w-full'>
         <div className='w-full py-2 sm:py-6 text-center text-4xl font-bold'>
-          Tailwind CC
+          Notion Parts Sample
         </div>
         <ol className='w-full py-2 sm:py-4 flex justify-center items-center content-center space-x-6 text-gray-800'>
           <li>

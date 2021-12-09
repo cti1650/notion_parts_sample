@@ -5,10 +5,8 @@ import React from 'react';
 export default function Layout({ children }) {
   return (
     <>
-      <div className='container max-w-screen-md mx-auto text-sans'>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+      <div className='flex justify-center items-center content-center'>
+        {children}
       </div>
     </>
   );
