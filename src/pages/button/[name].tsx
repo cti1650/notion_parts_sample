@@ -20,7 +20,7 @@ const Home = () => {
       <button className="px-8 py-4 bg-gray-300 border border-gray-500 shadow rounded-lg" onClick={handleClick}>
         {titleName}
       </button>
-      {~url.indexOf('http') ? (<a href={url} className="px-8 py-4 bg-gray-300 border border-gray-500 shadow rounded-lg" >link</a>):null}
+      <a href={url} className="px-8 py-4 bg-gray-300 border border-gray-500 shadow rounded-lg" >link</a>
     </div>
   );
 };
