@@ -2,12 +2,9 @@
 
 import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { AiFillGithub } from 'react-icons/ai';
 
-const Home = () => {
-  const router = useRouter();
-  const { user } = router.query;
+const Home = ({user}) => {
   const url = 'https://github.com/';
   return (
     <div>
@@ -27,6 +24,14 @@ const Home = () => {
       </span>
     </div>
   );
+};
+
+export const getStaticProps = async ({ params }) => {  
+  return {
+    props: {
+      user:params.user || ''
+    },
+  };
 };
 
 export default Home;

@@ -3,10 +3,7 @@ import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 
-const Home = () => {
-  const router = useRouter();
-  console.log(router);
-  const titleName = router.query.name;
+const Home = ({name}) => {
   const handleClick = () => {
     window.alert('ok');
   };
@@ -17,10 +14,17 @@ const Home = () => {
         <meta property='og:title' content='Tailwind CC' />
       </Head>
       <button className="px-8 py-4 bg-gray-300 border border-gray-500 shadow rounded-lg" onClick={handleClick}>
-        {titleName}
+        {name}
       </button>
     </div>
   );
+};
+export const getStaticProps = async ({ params }) => {  
+  return {
+    props: {
+      name:params.name || ''
+    },
+  };
 };
 
 export default Home;
